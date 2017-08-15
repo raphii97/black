@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>b l a c k e x c e l l e n c e</title>
+	<link rel="stylesheet" href="x.css">
+</head>
+<body>
+	<video src="" id="vid" autoplay loop></video>
+
+	<div id="title">b l a c k p o w e r</div>
+	<div id="hamburger">
+		<div>|||</div>
+		<img src="src/bp.png" alt="BP">
+	</div>
+
+	<div id="info">	
+		<div id="name"></div>
+		<div id="type"></div>
+		<div id="date"></div>
+		<a id="wiki" target="_blank">+ wiki</a>
+	</div>
+
+	<div id="menu">
+		<div class="center" id="peeps">
+			<div onclick="show(mx)">Malcolm X</div>
+			<div onclick="show(dc)">Dave Chappelle</div>
+			<div onclick="show(ma)">Muhammad Ali</div>
+			<div onclick="show(bo)">Barack Obama</div>
+			<div onclick="show(mk)">Martin Luther King Jr.</div>
+			<div onclick="show(jb)">James Brown</div>
+			<div onclick="show(mj)">Michael Jackson</div>
+			<div onclick="show(tc)">T'Challa</div>
+		</div>
+	</div>
+<script>
+//cards
+var mx = {
+	name: "Malcolm X",
+	type: "activist",
+	date: "1925 – 1965",
+	wiki: "https://en.wikipedia.org/wiki/Malcolm_X",
+	vid: "mx.mp4"
+};
+
+var dc = {
+	name: "Dave Chappelle",
+	type: "comedian",
+	date: "1973",
+	wiki: "https://en.wikipedia.org/wiki/Dave_Chappelle",
+	vid: "dc.mp4"
+};
+
+var ma = {
+	name: "Muhammad Ali",
+	type: "boxer",
+	date: "1942 - 2016",
+	wiki: "https://en.wikipedia.org/wiki/Muhammad_Ali",
+	vid: "ma.mp4"
+};
+
+var bo = {
+	name: "Barack Obama",
+	type: "president",
+	date: "1973",
+	wiki: "https://en.wikipedia.org/wiki/Barack_Obama",
+	vid: "bo.mp4"
+};
+
+var jb = {
+	name: "James Brown",
+	type: "godfather of soul",
+	date: "1933 - 2006",
+	wiki: "https://en.wikipedia.org/wiki/James_Brown",
+	vid: "jb.mp4"
+};
+
+var mk = {
+	name: "Martin Luther King Jr.",
+	type: "activist",
+	date: "1929 - 1968",
+	wiki: "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.",
+	vid: "mk.mp4"
+};
+
+var mj = {
+	name: "Michael Jackson",
+	type: "king of pop",
+	date: "1958 - 2009",
+	wiki: "https://en.wikipedia.org/wiki/Michael_Jackson",
+	vid: "mj.mp4"
+};
+
+var tc = {
+	name: "T'Challa",
+	type: "The Black Panther",
+	date: "1966",
+	wiki: "https://en.wikipedia.org/wiki/Black_Panther_(comics)",
+	vid: "tc.mp4"
+};
+
+//UI
+var ui = {};
+ui.name = document.getElementById('name');
+ui.type = document.getElementById('type');
+ui.date = document.getElementById('date');
+ui.wiki = document.getElementById('wiki');
+ui.vid = document.getElementById('vid');
+ui.hamburger = document.getElementById('hamburger');
+ui.menu = document.getElementById('menu');
+
+ui.hamburger.addEventListener("click", function(){
+	ui.menu.style.display = "block";
+});
+
+function show(card){
+	if(ui.wiki.href != card.wiki){	
+		ui.name.innerHTML = card.name;
+		ui.type.innerHTML = card.type;
+		ui.date.innerHTML = card.date;
+		ui.wiki.href = card.wiki;
+		ui.vid.src = "src/" + card.vid;
+	}
+	ui.menu.style.display = "none";
+}
+
+show(ma);
+</script>
+</body>
+</html>

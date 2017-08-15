@@ -1,0 +1,94 @@
+body{
+	margin: 0;
+	font-family: sans-serif;
+	background: #222;
+	color: #eee;
+	text-shadow: 0 0 25px #222;
+	overflow: hidden;
+}
+
+/*nav*/
+#hamburger{
+	position: absolute;
+	top: 40px;
+	left: 100px;
+	cursor: pointer;
+}
+#hamburger>div{
+	display: inline-block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	font-size: 2em;
+}
+#hamburger>img{
+	display: inline-block;
+	height: 30px;
+}
+
+#title{
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	text-align: center;
+}
+
+/*menu*/
+#menu{
+	position: absolute;
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+}
+
+#peeps{
+	font-size: 2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+#peeps>div{
+	cursor: pointer;
+	margin: 40px 0;
+}
+/*info*/
+#info{
+	position: absolute;
+	left: 100px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-weight: bold;
+}
+#name{
+	text-transform: uppercase;
+	font-size: 4em;
+}
+#type{
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+#date{
+	font-style: italic;
+	margin-bottom: 20px; 
+}
+#wiki{
+	text-decoration: none;
+	background: rgba(0,0,0,0.4);
+	padding: 10px 20px;
+	color: #eee;
+}
+/*media*/
+#vid{
+	min-width: 100%;
+	min-height: 100%;
+}
+
+/*pre*/
+.center{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

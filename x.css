@@ -10,37 +10,35 @@ body{
 /*nav*/
 #hamburger{
 	position: absolute;
+	z-index: 9;
 	top: 40px;
 	left: 100px;
 	cursor: pointer;
-}
-#hamburger>div{
-	display: inline-block;
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 	font-size: 2em;
 }
-#hamburger>img{
-	display: inline-block;
-	height: 30px;
-}
 
 #title{
 	position: absolute;
+	z-index: 8;
 	top: 50px;
-	width: 100%;
-	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
 }
 
 /*menu*/
 #menu{
+	display: none;
 	position: absolute;
-	z-index: 9;
+	z-index: 7;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
 	background: rgba(0,0,0,0.9);
+	cursor: crosshair;
 }
 
 #peeps{
@@ -55,34 +53,34 @@ body{
 }
 /*info*/
 #info{
-	position: absolute;
-	left: 100px;
-	top: 50%;
-	transform: translateY(-50%);
 	font-weight: bold;
+	text-align: center;
+}
+#info>*{
+	background: rgba(0,0,0,0.2);
+	padding: 10px 20px;
 }
 #name{
-	text-transform: uppercase;
 	font-size: 4em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
 }
 #type{
-	margin-top: 20px;
 	text-transform: uppercase;
 }
 #date{
 	font-style: italic;
-	margin-bottom: 20px; 
 }
 #wiki{
 	text-decoration: none;
-	background: rgba(0,0,0,0.4);
-	padding: 10px 20px;
 	color: #eee;
 }
 /*media*/
 #vid{
 	min-width: 100%;
 	min-height: 100%;
+	width: auto;
+	height: auto;
 }
 
 /*pre*/

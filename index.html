@@ -2,22 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>b l a c k e x c e l l e n c e</title>
+	<title>b l a c k</title>
 	<link rel="stylesheet" href="x.css">
 </head>
 <body>
-	<video src="" id="vid" autoplay loop></video>
+	<video src="" id="vid" class="center" autoplay loop></video>
 
-	<div id="title">b l a c k p o w e r</div>
-	<div id="hamburger">
-		<div>|||</div>
-		<img src="src/bp.png" alt="BP">
-	</div>
+	<div id="title">b l a c k e x c e l l e n c e</div>
+	<div id="hamburger">|||</div>
 
-	<div id="info">	
+	<div id="info" class="center">	
 		<div id="name"></div>
-		<div id="type"></div>
-		<div id="date"></div>
+		<span id="type"></span>
+		<span id="date"></span>
 		<a id="wiki" target="_blank">+ wiki</a>
 	</div>
 
@@ -26,11 +23,11 @@
 			<div onclick="show(mx)">Malcolm X</div>
 			<div onclick="show(dc)">Dave Chappelle</div>
 			<div onclick="show(ma)">Muhammad Ali</div>
+			<div onclick="show(mj)">Michael Jackson</div>
 			<div onclick="show(bo)">Barack Obama</div>
 			<div onclick="show(mk)">Martin Luther King Jr.</div>
 			<div onclick="show(jb)">James Brown</div>
-			<div onclick="show(mj)">Michael Jackson</div>
-			<div onclick="show(tc)">T'Challa</div>
+			<div onclick="show(bp)">Black Panther</div>
 		</div>
 	</div>
 <script>
@@ -62,7 +59,7 @@ var ma = {
 var bo = {
 	name: "Barack Obama",
 	type: "president",
-	date: "1973",
+	date: "1961",
 	wiki: "https://en.wikipedia.org/wiki/Barack_Obama",
 	vid: "bo.mp4"
 };
@@ -91,9 +88,9 @@ var mj = {
 	vid: "mj.mp4"
 };
 
-var tc = {
-	name: "T'Challa",
-	type: "The Black Panther",
+var bp = {
+	name: "Black Panther",
+	type: "superhero",
 	date: "1966",
 	wiki: "https://en.wikipedia.org/wiki/Black_Panther_(comics)",
 	vid: "tc.mp4"
@@ -110,7 +107,12 @@ ui.hamburger = document.getElementById('hamburger');
 ui.menu = document.getElementById('menu');
 
 ui.hamburger.addEventListener("click", function(){
-	ui.menu.style.display = "block";
+	var ms = ui.menu.style;
+	ms.display = ms.display == "block"? "none" : "block";
+});
+
+ui.menu.addEventListener("click", function(){
+	ui.menu.style.display = "none";
 });
 
 function show(card){
@@ -121,10 +123,9 @@ function show(card){
 		ui.wiki.href = card.wiki;
 		ui.vid.src = "src/" + card.vid;
 	}
-	ui.menu.style.display = "none";
 }
 
-show(ma);
+show(mj);
 </script>
 </body>
 </html>
